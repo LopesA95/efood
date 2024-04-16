@@ -1,16 +1,21 @@
+// Tag/index.tsx
+import React from "react";
 import { TagContainer } from "./styles";
 
-export type Props = {
+export interface TagProps {
   children: string;
   style?: React.CSSProperties;
   size?: "small" | "medium";
-  colorText: "primary" | "secondary";
-};
+  colortext: "primary" | "secondary";
+}
 
-export const Tag = ({ children, style, size, colorText }: Props) => (
-  <div>
-    <TagContainer colorText={colorText} size={size} style={style}>
-      {children}
-    </TagContainer>
-  </div>
+export const Tag: React.FC<TagProps> = ({
+  children,
+  style = {},
+  size = "medium",
+  colortext,
+}) => (
+  <TagContainer colortext={colortext} size={size} style={style}>
+    {children}
+  </TagContainer>
 );

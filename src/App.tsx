@@ -1,11 +1,16 @@
-import { Home } from "./pages/Home";
+import { Footer } from "./comonents/Footer";
+import { Header } from "./comonents/Header";
 import { GlobalStyle } from "./style/global";
+import { Rotas } from "./routes";
+import { BrowserRouter } from "react-router-dom";
 
 export function App() {
   return (
-    <div>
+    <BrowserRouter>
       <GlobalStyle />
-      <Home />
-    </div>
+      <Header />
+      <Rotas />
+      <Footer />
+    </BrowserRouter>
   );
 }

@@ -1,11 +1,11 @@
 import styled from "styled-components";
 import { colors } from "../../style/theme/default";
-import { Props } from ".";
+import { TagProps } from "./index";
 
-export const TagContainer = styled.div<Props>`
+export const TagContainer = styled.div<TagProps>`
   background-color: ${colors.colorSecondary};
   color: ${(props) =>
-    props.colorText === "primary"
+    props.colortext === "primary"
       ? colors.ColorPrimary
       : colors.colorSecondary};
   font-size: ${(props) => (props.size === "small" ? "14px" : "18px")};

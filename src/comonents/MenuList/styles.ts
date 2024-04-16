@@ -4,9 +4,12 @@ import { colors } from "../../style/theme/default";
 export const Container = styled.section`
   background-color: ${colors.backgroundColor};
 `;
-export const List = styled.ul`
+export const List = styled.ul<{ newRoute?: boolean }>`
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  column-gap: 80px;
-  margin-top: 80px;
+  grid-template-columns: ${(props) =>
+    props.newRoute ? "repeat(3, 1fr)" : "repeat(2, 1fr)"};
+  column-gap: ${(props) => (props.newRoute ? "40px" : "80px")};
+  margin-top: ${(props) => (props.newRoute ? "280px" : "80px")};
+  row-gap: 40px;
+  justify-content: center;
 `;
