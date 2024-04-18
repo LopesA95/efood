@@ -4,14 +4,17 @@ import { colors } from "../../style/theme/default";
 
 export const ButtonContainer = styled.button`
   background-color: ${colors.ColorPrimary};
+  width: 298px;
   border: 1px solid ${colors.ColorPrimary};
   align-items: center;
+  position: relative;
+  display: flex;
   justify-content: center;
   font-size: 18px;
-  width: 100%;
-  color: ${colors.ColorPrimary};
+  color: ${colors.colorSecondary};
   font-weight: bold;
-  margin: 4px 80px;
+  cursor: pointer;
+  margin: 8px;
 `;
 
 export const ButtonLink = styled(Link)`
@@ -25,4 +28,5 @@ export const ButtonLink = styled(Link)`
   display: inline-flex;
   margin-left: 8px;
   margin-bottom: 8px;
+  margin-top: 16px;
 `;

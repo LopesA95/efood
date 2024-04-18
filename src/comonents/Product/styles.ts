@@ -5,27 +5,10 @@ import { TagContainer } from "../Tag/styles";
 export const Card = styled.div<{ newRoute?: boolean }>`
   background-color: ${(props) =>
     props.newRoute ? colors.colorSecondary : colors.white};
-  position: relative;
   color: ${(props) => (props.newRoute ? colors.white : colors.colorSecondary)};
   border: 1px solid ${colors.colorSecondary};
-  margin-bottom: 40px;
-  row-gap: 48px;
+  position: relative;
 
-  div {
-    display: flex;
-    align-items: center;
-    height: 24px;
-  }
-
-  button.japonesa {
-    color: ${colors.ColorPrimary};
-    font-weight: bold;
-    background-color: ${colors.ColorPrimary};
-    border: 1px solid ${colors.ColorPrimary};
-    font-size: 18px;
-    width: 100%;
-    color: ${colors.ColorPrimary};
-  }
   ${TagContainer} {
     margin-right: 8px;
   }
@@ -35,10 +18,7 @@ export const Card = styled.div<{ newRoute?: boolean }>`
     `
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
-    width: 320px;
-    height: 340px;
-    row-gap: 20px;
+    overflow: hidden;
 
     img{
       padding: 8px;
@@ -48,29 +28,30 @@ export const Card = styled.div<{ newRoute?: boolean }>`
 `;
 
 export const CardTitle = styled.h3`
-  padding: 0 8px;
+  padding: 8px;
   font-size: 18px;
   font-weight: bold;
-  line-height: 24px;
-  margin-top: 8px;
-`;
-
-export const CardDescription = styled.p`
   display: flex;
-  padding: 16px 8px;
-  font-size: 14px;
-  line-height: 22px;
+  flex-direction: row;
 `;
 
 export const Infos = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: flex - end;
   position: absolute;
-  top: 16px;
-  right: 16px;
+  top: 8px;
+  right: 8px;
 `;
 
 export const Content = styled.div<{ newRoute?: boolean }>`
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+  justify-content: flex - end;
+  align-items: center;
+  position: absolute;
+  top: 222px;
+  right: 8px;
 
   img {
     margin-right: 8px;
@@ -79,9 +60,13 @@ export const Content = styled.div<{ newRoute?: boolean }>`
   ${(props) =>
     props.newRoute &&
     `
-    display: none;
-    padding: 8px;
     margin: 0;
-    justify-content: none;
   `}
+`;
+
+export const CardDescription = styled.p`
+  display: flex;
+  padding: 0 8px;
+  font-size: 14px;
+  line-height: 22px;
 `;

@@ -9,7 +9,7 @@ const italianas: Menu[] = [
     title: "La Dolce Vita Trattoria",
     category: "Italiana",
     description:
-      "Peça já o melhor da culinária japonesa no conforto da sua casa! Sushis frescos, sashimis deliciosos e pratos quentes irresistíveis. Entrega rápida, embalagens cuidadosas e qualidade garantida.Experimente o Japão sem sair do lar com nosso delivery!",
+      "A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!",
     infos: [],
     image: italiana,
     notes: "4.9",
@@ -19,7 +19,7 @@ const italianas: Menu[] = [
     title: "La Dolce Vita Trattoria",
     category: "Italiana",
     description:
-      "A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você! Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!",
+      "A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!",
     infos: [],
     image: italiana,
     notes: "4.6",
@@ -29,7 +29,7 @@ const italianas: Menu[] = [
     title: "La Dolce Vita Trattoria",
     category: "Italiana",
     description:
-      "A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você! Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!",
+      "A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!",
     infos: [],
     image: italiana,
     notes: "4.6",
@@ -39,7 +39,7 @@ const italianas: Menu[] = [
     title: "La Dolce Vita Trattoria",
     category: "Italiana",
     description:
-      "A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você! Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!",
+      "A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!",
     infos: [],
     image: italiana,
     notes: "4.6",
@@ -49,7 +49,7 @@ const italianas: Menu[] = [
     title: "La Dolce Vita Trattoria",
     category: "Italiana",
     description:
-      "A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você! Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!",
+      "A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!",
     infos: [],
     image: italiana,
     notes: "4.6",
@@ -59,7 +59,7 @@ const italianas: Menu[] = [
     title: "La Dolce Vita Trattoria",
     category: "Italiana",
     description:
-      "A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você! Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!",
+      "A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!",
     infos: [],
     image: italiana,
     notes: "4.6",
@@ -68,6 +68,6 @@ const italianas: Menu[] = [
 
 export const Italiana = () => (
   <>
-    <MenuList menus={italianas} title="Italianas" />
+    <MenuList menus={italianas} />
   </>
 );

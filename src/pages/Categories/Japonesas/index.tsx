@@ -68,6 +68,6 @@ const japonesas: Menu[] = [
 
 export const Japonesa = () => (
   <>
-    <MenuList menus={japonesas} title="Japonesa" />
+    <MenuList menus={japonesas} />
   </>
 );

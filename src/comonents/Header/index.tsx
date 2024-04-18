@@ -1,35 +1,54 @@
-import { ContentHeader, Image, Title } from "./styles";
-
-import logo from "../../assets/images/logo.svg";
-import backgroundImage from "../../assets/images/fundo_header.svg";
 import { Link, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { Banner } from "../Banner";
 
+import {
+  CartInfo,
+  ContentHeader,
+  HeaderBar,
+  RestaurantTitle,
+  StyledBanner,
+  Title,
+} from "./styles";
+import logo from "../../assets/images/logo.svg";
 export const Header = () => {
   const location = useLocation();
-  const [isHome, setIsHome] = useState(location.pathname === "/");
+  const [isRestaurantRoute, setIsRestaurantRoute] = useState(
+    location.pathname.startsWith("/italiana") ||
+      location.pathname.startsWith("/japonesa"),
+  );
 
   useEffect(() => {
-    setIsHome(location.pathname === "/");
+    setIsRestaurantRoute(
+      location.pathname.startsWith("/italiana") ||
+        location.pathname.startsWith("/japonesa"),
+    );
   }, [location]);
 
   return (
-    <div>
-      <Image
-        style={{
-          backgroundImage: `url(${backgroundImage})`,
-        }}
-      />
-      <ContentHeader>
-        <Link to="/">
-          <img src={logo} alt="EFOOD" />
-        </Link>
-        {isHome && (
-          <Title>Viva experiências gastronômicas no conforto da sua casa</Title>
+    <HeaderBar>
+      <div>
+        {isRestaurantRoute ? (
+          <>
+            <ContentHeader>
+              <RestaurantTitle>Restaurantes</RestaurantTitle>{" "}
+              <Link to="/">
+                <img src={logo} alt="Efood" />
+              </Link>
+              <CartInfo>0 produtos adicionados no carrinho</CartInfo>{" "}
+            </ContentHeader>
+            <StyledBanner />
+          </>
+        ) : (
+          <div className="container">
+            <Link to="/">
+              <img src={logo} alt="Efood" />
+            </Link>
+            <Title>
+              Viva experiências gastronômicas no conforto da sua casa
+            </Title>
+          </div>
         )}
-        {!isHome && <Banner />}
-      </ContentHeader>
-    </div>
+      </div>
+    </HeaderBar>
   );
 };

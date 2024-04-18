@@ -9,14 +9,19 @@ export const Container = styled.div`
   margin-top: 40px;
 
   img {
+    display: flex;
     margin-top: 40px;
+    align-items: center;
+    margin-right: 8px;
   }
 `;
 
 export const Links = styled.ul`
   display: flex;
-  margin-top: 32px;
+  margin-top: 24px;
   margin-bottom: 80px;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const Link = styled.a`

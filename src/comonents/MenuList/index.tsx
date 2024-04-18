@@ -5,7 +5,7 @@ import { Container, List } from "./styles";
 import { useLocation } from "react-router-dom";
 
 export type Props = {
-  title: string;
+  title?: string;
   menus: Menu[];
 };
 

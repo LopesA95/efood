@@ -68,10 +68,10 @@ export const Product = ({
             </Tag>
           ))}
       </Infos>
+      <CardTitle>{mainTitle}</CardTitle>
       <Content newRoute={newRoute}>
-        <CardTitle>{mainTitle}</CardTitle>
         {newRoute ? null : (
-          <div>
+          <>
             <Tag
               colortext="secondary"
               style={{ backgroundColor: "transparent" }}
@@ -80,7 +80,7 @@ export const Product = ({
               {notes}
             </Tag>
             <img src={estrela} alt="Estrela" />
-          </div>
+          </>
         )}
       </Content>
       <CardDescription>{description}</CardDescription>
