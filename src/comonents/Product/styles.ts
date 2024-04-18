@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import { colors } from "../../style/theme/default";
-import { TagContainer } from "../Tag/styles";
+import styled from 'styled-components'
+import { colors } from '../../style/theme/default'
+import { TagContainer } from '../Tag/styles'
 
 export const Card = styled.div<{ newRoute?: boolean }>`
   background-color: ${(props) =>
@@ -25,7 +25,7 @@ export const Card = styled.div<{ newRoute?: boolean }>`
     }
 
   `}
-`;
+`
 
 export const CardTitle = styled.h3`
   padding: 8px;
@@ -33,7 +33,7 @@ export const CardTitle = styled.h3`
   font-weight: bold;
   display: flex;
   flex-direction: row;
-`;
+`
 
 export const Infos = styled.div`
   display: flex;
@@ -42,7 +42,7 @@ export const Infos = styled.div`
   position: absolute;
   top: 8px;
   right: 8px;
-`;
+`
 
 export const Content = styled.div<{ newRoute?: boolean }>`
   display: flex;
@@ -62,11 +62,11 @@ export const Content = styled.div<{ newRoute?: boolean }>`
     `
     margin: 0;
   `}
-`;
+`
 
 export const CardDescription = styled.p`
   display: flex;
   padding: 0 8px;
   font-size: 14px;
   line-height: 22px;
-`;
+`

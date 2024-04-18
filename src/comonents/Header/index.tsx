@@ -1,5 +1,5 @@
-import { Link, useLocation } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { Link, useLocation } from 'react-router-dom'
+import { useEffect, useState } from 'react'
 
 import {
   CartInfo,
@@ -7,22 +7,22 @@ import {
   HeaderBar,
   RestaurantTitle,
   StyledBanner,
-  Title,
-} from "./styles";
-import logo from "../../assets/images/logo.svg";
+  Title
+} from './styles'
+import logo from '../../assets/images/logo.svg'
 export const Header = () => {
-  const location = useLocation();
+  const location = useLocation()
   const [isRestaurantRoute, setIsRestaurantRoute] = useState(
-    location.pathname.startsWith("/italiana") ||
-      location.pathname.startsWith("/japonesa"),
-  );
+    location.pathname.startsWith('/italiana') ||
+      location.pathname.startsWith('/japonesa')
+  )
 
   useEffect(() => {
     setIsRestaurantRoute(
-      location.pathname.startsWith("/italiana") ||
-        location.pathname.startsWith("/japonesa"),
-    );
-  }, [location]);
+      location.pathname.startsWith('/italiana') ||
+        location.pathname.startsWith('/japonesa')
+    )
+  }, [location])
 
   return (
     <HeaderBar>
@@ -30,11 +30,11 @@ export const Header = () => {
         {isRestaurantRoute ? (
           <>
             <ContentHeader>
-              <RestaurantTitle>Restaurantes</RestaurantTitle>{" "}
+              <RestaurantTitle>Restaurantes</RestaurantTitle>{' '}
               <Link to="/">
                 <img src={logo} alt="Efood" />
               </Link>
-              <CartInfo>0 produtos adicionados no carrinho</CartInfo>{" "}
+              <CartInfo>0 produtos adicionados no carrinho</CartInfo>{' '}
             </ContentHeader>
             <StyledBanner />
           </>
@@ -50,5 +50,5 @@ export const Header = () => {
         )}
       </div>
     </HeaderBar>
-  );
-};
+  )
+}

@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { colors } from "../../style/theme/default";
+import styled from 'styled-components'
+import { colors } from '../../style/theme/default'
 
 export const Container = styled.div`
   background-color: ${colors.ColorPrimary};
@@ -14,7 +14,7 @@ export const Container = styled.div`
     align-items: center;
     margin-right: 8px;
   }
-`;
+`
 
 export const Links = styled.ul`
   display: flex;
@@ -22,18 +22,18 @@ export const Links = styled.ul`
   margin-bottom: 80px;
   align-items: center;
   justify-content: center;
-`;
+`
 
 export const Link = styled.a`
   margin-right: 8px;
-`;
+`
 export const FooterSection = styled.div`
   margin-bottom: 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-`;
+`
 
 export const FooterDescription = styled.p`
   max-width: 480px;
@@ -43,4 +43,4 @@ export const FooterDescription = styled.p`
   line-height: 12px;
   text-align: center;
   color: ${colors.colorSecondary};
-`;
+`

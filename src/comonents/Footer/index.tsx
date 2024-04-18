@@ -1,14 +1,14 @@
-import logo from "../../assets/images/logo.svg";
-import instagram from "../../assets/images/instagram.svg";
-import facebook from "../../assets/images/facebook.svg";
-import twitter from "../../assets/images/twitter.svg";
+import logo from '../../assets/images/logo.svg'
+import instagram from '../../assets/images/instagram.svg'
+import facebook from '../../assets/images/facebook.svg'
+import twitter from '../../assets/images/twitter.svg'
 import {
   Container,
   FooterDescription,
   FooterSection,
   Link,
-  Links,
-} from "./styles";
+  Links
+} from './styles'
 
 export const Footer = () => (
   <Container>
@@ -40,4 +40,4 @@ export const Footer = () => (
       </FooterSection>
     </div>
   </Container>
-);
+)

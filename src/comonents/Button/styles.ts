@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import { Link } from "react-router-dom";
-import { colors } from "../../style/theme/default";
+import styled from 'styled-components'
+import { Link } from 'react-router-dom'
+import { colors } from '../../style/theme/default'
 
 export const ButtonContainer = styled.button`
   background-color: ${colors.ColorPrimary};
@@ -15,7 +15,7 @@ export const ButtonContainer = styled.button`
   font-weight: bold;
   cursor: pointer;
   margin: 8px;
-`;
+`
 
 export const ButtonLink = styled(Link)`
   border: 2px solid ${colors.colorSecondary};
@@ -29,4 +29,4 @@ export const ButtonLink = styled(Link)`
   margin-left: 8px;
   margin-bottom: 8px;
   margin-top: 16px;
-`;
+`

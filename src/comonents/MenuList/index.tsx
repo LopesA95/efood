@@ -1,28 +1,28 @@
-import { useEffect, useState } from "react";
-import { Menu } from "../../models/Menu";
-import { Product } from "../Product";
-import { Container, List } from "./styles";
-import { useLocation } from "react-router-dom";
+import { useEffect, useState } from 'react'
+import { Menu } from '../../models/Menu'
+import { Product } from '../Product'
+import { Container, List } from './styles'
+import { useLocation } from 'react-router-dom'
 
 export type Props = {
-  title?: string;
-  menus: Menu[];
-};
+  title?: string
+  menus: Menu[]
+}
 
 export const MenuList = ({ menus, title }: Props) => {
-  const location = useLocation();
-  const [newRoute, setNewRoute] = useState(false);
+  const location = useLocation()
+  const [newRoute, setNewRoute] = useState(false)
 
   useEffect(() => {
     if (
-      location.pathname.includes("/japonesa") ||
-      location.pathname.includes("/italiana")
+      location.pathname.includes('/japonesa') ||
+      location.pathname.includes('/italiana')
     ) {
-      setNewRoute(true);
+      setNewRoute(true)
     } else {
-      setNewRoute(false);
+      setNewRoute(false)
     }
-  }, [location]);
+  }, [location])
 
   return (
     <Container>
@@ -43,5 +43,5 @@ export const MenuList = ({ menus, title }: Props) => {
         </List>
       </div>
     </Container>
-  );
-};
+  )
+}
