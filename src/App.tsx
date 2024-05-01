@@ -1,8 +1,8 @@
-import { Footer } from './comonents/Footer'
-import { Header } from './comonents/Header'
-import { GlobalStyle } from './style/global'
-import { Rotas } from './routes'
 import { BrowserRouter } from 'react-router-dom'
+import { Footer } from './components/Footer'
+import { Header } from './components/Header'
+import { Rotas } from './routes'
+import { GlobalStyle } from './style/global'
 
 export function App() {
   return (

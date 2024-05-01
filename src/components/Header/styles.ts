@@ -2,15 +2,19 @@ import styled from 'styled-components'
 import { colors } from '../../style/theme/default'
 
 import logo from '../../assets/images/fundo_header.svg'
-import { Banner } from '../Banner'
+import { Hero } from '../Hero'
 
-export const HeaderBar = styled.header`
+interface Props {
+  altura: string
+}
+
+export const HeaderBar = styled.header<Props>`
   background-image: url(${logo});
   padding-top: 64px;
   display: flex;
   align-items: center;
   flex-direction: column;
-  height: 384px;
+  height: ${(props) => props.altura};
   font-size: 18px;
   font-weight: bold;
 
@@ -32,7 +36,7 @@ export const Title = styled.h2`
   margin-bottom: 40px;
 `
 
-export const StyledBanner = styled(Banner)`
+export const StyledBanner = styled(Hero)`
   margin-top: 60px;
 `
 

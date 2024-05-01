@@ -8,15 +8,7 @@ export const Image = styled.div`
   background-size: cover;
   margin-top: 80px;
   color: ${colors.white};
-`
-
-export const Title = styled.h3`
-  font-weight: 100;
-  font-size: 32px;
-  line-height: 38px;
   position: relative;
-  margin-bottom: 60px;
-  padding-top: 20px;
 `
 
 export const RestName = styled.h3`

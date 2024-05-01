@@ -6,7 +6,7 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 40px;
+  margin-top: 120px;
 
   img {
     display: flex;

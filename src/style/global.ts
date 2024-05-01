@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components'
 import { colors } from './theme/default'
 
 export const GlobalStyle = createGlobalStyle`
@@ -20,5 +20,34 @@ export const GlobalStyle = createGlobalStyle`
     max-width: 1024px;
     width: 100%;
     margin: 0 auto;
+  }
+`
+
+export const Container = styled.div`
+  display: flex;
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+  align-items: center;
+
+  h2 {
+    display: flex;
+    max-width: 109px;
+    font-size: 18px;
+    color: ${colors.colorSecondary};
+  }
+
+  p {
+    display: flex;
+    max-width: 256px;
+    width: 100%;
+    font-size: 18px;
+    color: ${colors.colorSecondary};
+  }
+  img {
+    display: flex;
+    max-width: 125px;
+    margin-right: 240px;
+    margin-left: 350px;
   }
 `
