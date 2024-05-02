@@ -9,5 +9,5 @@ export const TagContainer = styled.div<Props>`
     props.comp === 'primary' ? colors.colorSecondary : colors.ColorPrimary};
   font-size: ${(props) => (props.size === 'small' ? '14px' : '18px')};
   font-weight: 700;
-  padding: 6px 4px;
+  padding: ${(props) => (props.size === 'small' ? '4px 8px' : '0')};
 `

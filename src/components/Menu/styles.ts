@@ -21,7 +21,7 @@ export const Card = styled.div`
 `
 
 export const CardTitle = styled.h3`
-  padding: 8px;
+  padding-left: 8px;
   font-size: 18px;
   font-weight: bold;
   display: flex;
@@ -39,9 +39,8 @@ export const Tipos = styled.div`
 export const Content = styled.div`
   display: flex;
   align-items: center;
-  top: 222px;
-  right: 8px;
   justify-content: space-between;
+  padding-top: 8px;
 
   div {
     display: flex;
@@ -50,6 +49,7 @@ export const Content = styled.div`
       width: 21px;
       height: 21px;
       margin-right: 8px;
+      margin-left: 8px;
     }
   }
 `
@@ -57,8 +57,8 @@ export const Content = styled.div`
 export const CardDescription = styled.p`
   display: flex;
   text-align: justify;
-  padding: 0 8px;
+  padding: 16px 8px;
   font-size: 14px;
   line-height: 22px;
-  height: 130px;
+  height: 140px;
 `
