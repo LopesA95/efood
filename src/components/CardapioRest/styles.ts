@@ -61,7 +61,6 @@ export const ModalContent = styled.div`
   display: flex;
   position: relative;
   z-index: 1;
-  max-width: 960px;
   .close {
     width: 16px;
     height: 16px;

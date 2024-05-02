@@ -3,19 +3,16 @@ import { colors } from '../../style/theme/default'
 
 export const PratoContainer = styled.div`
   display: flex;
+  width: 1024px;
   background-color: ${colors.colorSecondary};
   color: ${colors.ColorPrimary};
 `
 export const Content = styled.div`
-  max-width: 1024px;
   display: flex;
-  width: 100%;
   column-gap: 24px;
 
-  svg {
-    color: ${colors.ColorPrimary};
-    width: 21px;
-    height: 21px;
+  div {
+    max-width: 688px;
   }
 `
 
@@ -24,8 +21,8 @@ export const Foto = styled.img`
   height: 280px;
   object-fit: cover;
   padding-top: 32px;
-  margin-bottom: 32px;
-  margin-left: 32px;
+  padding-bottom: 32px;
+  padding-left: 32px;
 `
 export const Title = styled.h1`
   padding-top: 32px;
