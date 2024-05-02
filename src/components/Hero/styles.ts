@@ -17,7 +17,7 @@ export const Banner = styled.div`
   &::after {
     position: absolute;
     background-color: #000;
-    opacity: 0.56;
+    opacity: 0.5;
     width: 100%;
     height: 100%;
     top: 0;
@@ -46,7 +46,6 @@ export const Title = styled.h3`
 
 export const Infos = styled.div`
   padding: 16px;
-  font-weight: bold;
   color: ${colors.white};
   height: 280px;
   justify-content: space-between;
@@ -60,6 +59,7 @@ export const Infos = styled.div`
     width: 100%;
     font-size: 32px;
     margin: 16px 0;
+    font-weight: bold;
 
     span {
       display: block;

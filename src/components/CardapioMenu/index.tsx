@@ -6,6 +6,12 @@ export type Props = {
   title?: string
   menus: Menu[]
 }
+export const formatPrice = (preco = 0): string => {
+  return new Intl.NumberFormat('pt-BR', {
+    style: 'currency',
+    currency: 'BRL'
+  }).format(preco)
+}
 
 export const CardapioMenu = ({ menus, title }: Props) => {
   return (
@@ -14,13 +20,15 @@ export const CardapioMenu = ({ menus, title }: Props) => {
         <h2>{title}</h2>
         <List>
           {menus.flatMap((menu) =>
-            menu.cardapio.map((item) => (
-              <li key={item.id}>
+            menu.cardapio.map((menu) => (
+              <li key={menu.id}>
                 <Cardapios
-                  id={item.id}
-                  descricao={item.descricao}
-                  foto={item.foto}
-                  nome={item.nome}
+                  id={menu.id}
+                  descricao={menu.descricao}
+                  foto={menu.foto}
+                  nome={menu.nome}
+                  porcao={menu.porcao}
+                  preco={menu.preco}
                 />
               </li>
             ))

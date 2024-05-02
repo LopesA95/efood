@@ -2,6 +2,15 @@ import { MenuList } from '../../components/MenuRestaurantes'
 
 import { useEffect, useState } from 'react'
 
+export interface CardapioItem {
+  id: number
+  preco: number
+  nome: string
+  descricao: string
+  porcao: string
+  foto: string
+}
+
 export type Menu = {
   id: number
   titulo: string
@@ -10,16 +19,7 @@ export type Menu = {
   avaliacao: string
   descricao: string
   capa: string
-  cardapio: [
-    {
-      id: number
-      preco: number
-      nome: string
-      descricao: string
-      porcao: string
-      foto: string
-    }
-  ]
+  cardapio: CardapioItem[]
 }
 
 export const Home = () => {

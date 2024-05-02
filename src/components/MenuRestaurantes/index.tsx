@@ -7,13 +7,6 @@ export type Props = {
   menus: Menu[]
 }
 
-export const formatPrice = (price = 0) => {
-  return new Intl.NumberFormat('pt-BR', {
-    style: 'currency',
-    currency: 'BRL'
-  }).format(price)
-}
-
 export const MenuList = ({ menus, title }: Props) => {
   const getMenuTags = (menus: Menu) => {
     const tags = []

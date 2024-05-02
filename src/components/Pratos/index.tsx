@@ -1,23 +1,39 @@
-import { Button } from '../Button'
-import { CardapioContainer, Description, Title } from './styles'
+import { CardapioItem } from '../../pages/Home'
+import { formatPrice } from '../CardapioMenu'
+import {
+  Button,
+  Content,
+  Description,
+  Foto,
+  Porcao,
+  PratoContainer,
+  Title
+} from './styles'
 
-export type Props = {
-  foto?: string
-  nome?: string
+type Props = {
+  menu: CardapioItem
+  foto: string
+  nome: string
   descricao: string
-  id?: number
+  porcao: string
+  preco: number
 }
 
-return (
-  <CardapioContainer>
-    <img src={foto} alt={nome} />
-    <Title>{nome}</Title>
-    <Description>{descricao}</Description>
-    <Button type="button" title="Adicionar ao carrinho">
-      Adicionar ao carrinho
-    </Button>
-  </CardapioContainer>
-)
+export const Prato = ({ menu }: Props) => {
+  return (
+    <PratoContainer>
+      <Content>
+        <Foto src={menu?.foto} alt={menu?.nome} />
+        <div>
+          <Title>{menu?.nome}</Title>
+          <Description>{menu?.descricao}</Description>
+          <Porcao>{menu?.porcao}</Porcao>
+          <Button>
+            Adicionar ao carrinho -{' '}
+            {menu?.preco && <>{formatPrice(menu?.preco)}</>}
+          </Button>
+        </div>
+      </Content>
+    </PratoContainer>
+  )
 }
-
-
