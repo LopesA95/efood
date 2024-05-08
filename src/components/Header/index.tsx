@@ -1,10 +1,20 @@
 import { useEffect, useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import { Link, useLocation } from 'react-router-dom'
 import logo from '../../assets/images/logo.svg'
+import { RootReducer } from '../../store'
 import { Container } from '../../style/global'
-import { HeaderBar, Title } from './styles'
+import { CartButton, HeaderBar, Title } from './styles'
+import { open } from '../../store/reducers/cart'
 
 export const Header = () => {
+  const dispatch = useDispatch()
+
+  const { menus } = useSelector((state: RootReducer) => state.cart)
+
+  const handleOpenCart = () => {
+    dispatch(open())
+  }
   const location = useLocation()
   const [altura, setAltura] = useState('384px')
 
@@ -34,7 +44,9 @@ export const Header = () => {
               <Link to="/">
                 <img src={logo} alt="Efood" />
               </Link>
-              <p>0 produto(s) no carrinho</p>
+              <CartButton onClick={handleOpenCart}>
+                {menus.length} produto(s) no carrinho
+              </CartButton>
             </Container>
           )}
         </div>

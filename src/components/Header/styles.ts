@@ -59,3 +59,8 @@ export const ContentHeader = styled.div`
   max-width: 1024px;
   margin: 0 auto;
 `
+export const CartButton = styled.a`
+  display: flex;
+  cursor: pointer;
+  color: ${colors.colorSecondary};
+`

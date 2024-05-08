@@ -14,7 +14,7 @@ export type Props = {
   foto: string
   nome: string
   descricao: string
-  id?: number
+  id: number
   porcao: string
   preco: number
 }
@@ -24,7 +24,8 @@ export const Cardapios: React.FC<Props> = ({
   nome,
   descricao,
   porcao,
-  preco
+  preco,
+  id
 }: Props) => {
   const [isOpen, setIsOpen] = useState(false)
   const getDesciption = (descricaos: string) => {
@@ -62,7 +63,7 @@ export const Cardapios: React.FC<Props> = ({
             }}
           />
           <Prato
-            menu={{ id: 0, preco, nome, descricao, porcao, foto }}
+            menu={{ id, preco, nome, descricao, porcao, foto }}
             foto={foto}
             nome={nome}
             descricao={descricao}

@@ -6,7 +6,7 @@ const api = createApi({
     baseUrl: 'https://fake-api-tau.vercel.app/api/efood'
   }),
   endpoints: (builder) => ({
-    getRestaurants: builder.query<Menu, void>({
+    getRestaurants: builder.query<Menu[], void>({
       query: () => '/restaurantes'
     }),
     getPratos: builder.query<Menu, string>({

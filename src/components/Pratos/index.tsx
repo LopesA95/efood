@@ -1,4 +1,6 @@
+import { useDispatch } from 'react-redux'
 import { CardapioItem } from '../../pages/Home'
+import { addToCart, open } from '../../store/reducers/cart'
 import { formatPrice } from '../CardapioMenu'
 import {
   Button,
@@ -20,6 +22,12 @@ type Props = {
 }
 
 export const Prato = ({ menu }: Props) => {
+  const dispatch = useDispatch()
+
+  const handleAddToCart = () => {
+    dispatch(addToCart(menu))
+    dispatch(open())
+  }
   return (
     <PratoContainer>
       <Content>
@@ -28,7 +36,7 @@ export const Prato = ({ menu }: Props) => {
           <Title>{menu?.nome}</Title>
           <Description>{menu?.descricao}</Description>
           <Porcao>{menu?.porcao}</Porcao>
-          <Button>
+          <Button onClick={handleAddToCart}>
             Adicionar ao carrinho -{' '}
             {menu?.preco && <>{formatPrice(menu?.preco)}</>}
           </Button>

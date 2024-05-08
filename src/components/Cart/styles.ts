@@ -18,21 +18,25 @@ export const CartContainer = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  display: flex;
+  display: none;
   justify-content: flex-end;
   z-index: 1;
+
+  &.is-open {
+    display: flex;
+  }
 `
 export const Sidebar = styled.aside`
   background-color: ${colors.colorSecondary};
   z-index: 1;
   padding: 32px 8px 0 8px;
   max-width: 360px;
-  width: 100%;
 
   ${ButtonContainer} {
-    max-width: 100%;
+    max-width: 344px;
     width: 100%;
-    padding: 4px 70px;
+    padding: 8px 70px;
+    margin: 16px 0;
   }
 `
 export const Prices = styled.p`
@@ -83,5 +87,6 @@ export const CartItem = styled.li`
     position: absolute;
     bottom: 8px;
     right: 8px;
+    cursor: pointer;
   }
 `
