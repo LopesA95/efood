@@ -3,9 +3,9 @@ import { useDispatch, useSelector } from 'react-redux'
 import { Link, useLocation } from 'react-router-dom'
 import logo from '../../assets/images/logo.svg'
 import { RootReducer } from '../../store'
+import { open } from '../../store/reducers/cart'
 import { Container } from '../../style/global'
 import { CartButton, HeaderBar, Title } from './styles'
-import { open } from '../../store/reducers/cart'
 
 export const Header = () => {
   const dispatch = useDispatch()

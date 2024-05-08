@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { breakpoints } from '../../style/global'
 import { colors } from '../../style/theme/default'
 
 export const PratoContainer = styled.div`
@@ -6,6 +7,15 @@ export const PratoContainer = styled.div`
   width: 1024px;
   background-color: ${colors.colorSecondary};
   color: ${colors.ColorPrimary};
+
+  @media (max-width: ${breakpoints.desktop}) {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 768px;
+    margin: 0 auto;
+    max-width: 80%;
+  }
 `
 export const Content = styled.div`
   display: flex;
@@ -51,4 +61,8 @@ export const Button = styled.button`
   font-weight: 700;
   cursor: pointer;
   margin-top: 16px;
+
+  @media (max-width: ${breakpoints.desktop}) {
+    margin-bottom: 16px;
+  }
 `

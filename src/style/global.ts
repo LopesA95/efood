@@ -1,5 +1,9 @@
 import styled, { createGlobalStyle } from 'styled-components'
 import { colors } from './theme/default'
+export const breakpoints = {
+  desktop: '1024px',
+  tablet: '768px'
+}
 
 export const GlobalStyle = createGlobalStyle`
   * {
@@ -49,5 +53,24 @@ export const Container = styled.div`
     max-width: 125px;
     margin-right: 240px;
     margin-left: 350px;
+
+    @media (max-width: ${breakpoints.tablet}) {
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+
+  @media (max-width: ${breakpoints.tablet}) {
+    flex-direction: column;
+    align-items: center;
+
+    img {
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+
+  @media (max-width: ${breakpoints.desktop}) {
+    max-width: 80%;
   }
 `
