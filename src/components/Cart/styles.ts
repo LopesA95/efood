@@ -67,9 +67,11 @@ export const CartItem = styled.li`
   }
 
   h3 {
+    width: 360px;
     color: ${colors.colorSecondary};
     font-weight: bold;
     font-size: 18px;
+    padding-right: 108px;
   }
   span {
     display: block;
