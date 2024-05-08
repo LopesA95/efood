@@ -6,10 +6,10 @@ import { colors } from '../../style/theme/default'
 export const ButtonContainer = styled(Link)<Props>`
   background-color: ${(props) =>
     props.backgroundColor ? colors.colorSecondary : colors.ColorPrimary};
-  width: 306px;
+  width: ${(props) => (props.variant ? '306px' : '344px')};
   height: 24px;
   border: 1px solid ${colors.ColorPrimary};
-  padding: 4px 84px;
+  padding: ${(props) => (props.variant ? '8px 84px' : '8px 60px')};
   align-items: center;
   display: flex;
   justify-content: center;
