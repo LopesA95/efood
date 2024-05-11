@@ -3,6 +3,7 @@ import { BrowserRouter } from 'react-router-dom'
 import { Cart } from './components/Cart'
 import { Footer } from './components/Footer'
 import { Header } from './components/Header'
+import { Checkout } from './pages/Checkout'
 import { Rotas } from './routes'
 import { store } from './store'
 import { GlobalStyle } from './style/global'
@@ -16,6 +17,7 @@ export function App() {
         <Rotas />
         <Footer />
         <Cart />
+        <Checkout />
       </BrowserRouter>
     </Provider>
   )
