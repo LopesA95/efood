@@ -48,7 +48,7 @@ const api = createApi({
     }),
     purchase: builder.mutation<PurchaseResponse, PurchasePayload>({
       query: (body) => ({
-        url: '/compras',
+        url: '/checkout',
         method: 'POST',
         body
       })

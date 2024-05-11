@@ -16,8 +16,8 @@ export function App() {
         <Header />
         <Rotas />
         <Footer />
-        <Cart />
         <Checkout />
+        <Cart />
       </BrowserRouter>
     </Provider>
   )
