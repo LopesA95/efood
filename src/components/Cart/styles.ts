@@ -38,6 +38,13 @@ export const Sidebar = styled.aside`
     padding: 8px 70px;
     margin: 16px 0;
   }
+
+  .empty-text {
+    font-size: 14px;
+    line-height: 22px;
+    color: ${colors.white};
+    text-align: center;
+  }
 `
 export const Prices = styled.p`
   font-weight: bold;
