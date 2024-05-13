@@ -4,6 +4,7 @@ import { RootReducer } from '../../store'
 import { close, removeToCart } from '../../store/reducers/cart'
 import { formatPrice } from '../CardapioMenu'
 import { CartContainer, CartItem, Overlay, Prices, Sidebar } from './styles'
+import { Button } from '../Button'
 
 export const Cart = () => {
   const { isOpen, menus } = useSelector((state: RootReducer) => state.cart)
@@ -50,13 +51,13 @@ export const Cart = () => {
             <Prices>
               Valor total <span>{formatPrice(getTotalPrice())}</span>
             </Prices>
-            <button
+            <Button
               onClick={() => goToCheckout()}
               type="button"
               title="Clique para continuar a compra "
             >
               Continuar com a entrega
-            </button>
+            </Button>
           </>
         ) : (
           <p className="empty-text">
