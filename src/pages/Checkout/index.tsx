@@ -6,7 +6,7 @@ import { Button } from '../../components/Button'
 import { CardCheckout } from '../../components/CheckoutCard'
 import { usePurchaseMutation } from '../../services/api'
 import { RootReducer } from '../../store'
-import { clear, close, open } from '../../store/reducers/cart'
+import { clear, close } from '../../store/reducers/cart'
 import {
   CheckoutContainer,
   ContentCheckout,

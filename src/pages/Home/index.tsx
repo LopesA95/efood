@@ -1,3 +1,4 @@
+import { Loader } from '../../components/Loader'
 import { MenuList } from '../../components/MenuRestaurantes'
 
 import { useGetRestaurantsQuery } from '../../services/api'
@@ -32,5 +33,5 @@ export const Home = () => {
       </>
     )
   }
-  return <h4>carregando...</h4>
+  return <Loader />
 }

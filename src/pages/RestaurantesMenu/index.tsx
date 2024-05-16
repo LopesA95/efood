@@ -2,13 +2,14 @@ import { useParams } from 'react-router-dom'
 import { CardapioMenu } from '../../components/CardapioMenu'
 import { Hero } from '../../components/Hero'
 import { useGetPratosQuery } from '../../services/api'
+import { Loader } from '../../components/Loader'
 
 export const Product = () => {
   const { id } = useParams()
   const { data: menu } = useGetPratosQuery(id!)
 
   if (!menu || !menu.cardapio) {
-    return <h3>Carregando...</h3>
+    return <Loader />
   }
   return (
     <>

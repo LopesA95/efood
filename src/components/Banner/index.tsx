@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Menu } from '../../pages/Home'
 import { Image } from './styles'
+import { Loader } from '../Loader'
 
 export function Banner() {
   const [menu, setMenu] = useState<Menu>()
@@ -12,9 +13,13 @@ export function Banner() {
         setMenu(res)
       })
   }, [])
-  if (!menu) {
-    return <h3>Carregando ...</h3>
-  }
 
+  if (!menu) {
+    return (
+      <h3>
+        <Loader />
+      </h3>
+    )
+  }
   return <Image style={{ backgroundImage: `url(${menu.capa})` }} />
 }
