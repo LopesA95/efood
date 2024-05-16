@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { ButtonContainer } from '../../components/Button/styles'
 import { breakpoints } from '../../style/global'
 import { colors } from '../../style/theme/default'
 
@@ -65,15 +64,16 @@ export const SidebarCheckout = styled.aside`
   background-color: ${colors.colorSecondary};
   z-index: 1;
   max-width: 360px;
-
-  ${ButtonContainer} {
-    max-width: 344px;
-    width: 100%;
-    padding: 8px 60px;
-  }
 `
 
 export const ContentCheckout = styled.div`
   display: flex;
   justify-content: space-between;
+`
+export const DeliveryStatus = styled.div`
+  p {
+    color: ${colors.ColorPrimary};
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
 `

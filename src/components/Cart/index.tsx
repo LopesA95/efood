@@ -1,15 +1,16 @@
+import { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { useNavigate } from 'react-router-dom'
-import { RootReducer } from '../../store'
 import { close, removeToCart } from '../../store/reducers/cart'
 import { formatPrice } from '../CardapioMenu'
 import { CartContainer, CartItem, Overlay, Prices, Sidebar } from './styles'
 import { Button } from '../Button'
+import { Checkout } from '../../pages/Checkout'
+import { RootReducer } from '../../store'
 
 export const Cart = () => {
   const { isOpen, menus } = useSelector((state: RootReducer) => state.cart)
-  const navigate = useNavigate()
   const dispatch = useDispatch()
+  const [showCheckout, setShowCheckout] = useState(false)
 
   const handleCloseCart = () => {
     dispatch(close())
@@ -24,7 +25,16 @@ export const Cart = () => {
   }
 
   const goToCheckout = () => {
-    navigate('/checkout')
+    console.log('Clicou no botão de checkout.')
+    if (menus.length > 0) {
+      setShowCheckout(true)
+    } else {
+      console.log('Carrinho vazio.')
+    }
+  }
+
+  const handleReturnToCart = () => {
+    setShowCheckout(false)
   }
 
   return (
@@ -51,13 +61,15 @@ export const Cart = () => {
             <Prices>
               Valor total <span>{formatPrice(getTotalPrice())}</span>
             </Prices>
-            <Button
-              onClick={() => goToCheckout()}
-              type="button"
-              title="Clique para continuar a compra "
-            >
-              Continuar com a entrega
-            </Button>
+            {!showCheckout && (
+              <Button
+                onClick={goToCheckout}
+                type="button"
+                title="Clique para continuar a compra"
+              >
+                Continuar com a entrega
+              </Button>
+            )}
           </>
         ) : (
           <p className="empty-text">
@@ -65,6 +77,7 @@ export const Cart = () => {
             com a compra!
           </p>
         )}
+        {showCheckout && <Checkout handleReturnToCart={handleReturnToCart} />}
       </Sidebar>
     </CartContainer>
   )

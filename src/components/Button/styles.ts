@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Props } from '.'
 import { colors } from '../../style/theme/default'
 
-export const ButtonContainer = styled(Link)<Props>`
+export const ButtonContainer = styled.button<Props>`
   background-color: ${(props) =>
     props.backgroundColor ? colors.colorSecondary : colors.ColorPrimary};
   width: 306px;

@@ -2,5 +2,26 @@
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit"
-  }
+  },
+  "cSpell.words": [
+    "adicione",
+    "adress",
+    "botão",
+    "Cardapio",
+    "Cardapios",
+    "compra",
+    "continuar",
+    "Desciption",
+    "descricao",
+    "descricaos",
+    "entrega",
+    "Formik",
+    "menos",
+    "pelo",
+    "porcao",
+    "preco",
+    "produto",
+    "zipcode"
+  ],
+  "cSpell.language": "en,en-GB,en-US,lorem,pt,pt-BR"
 }

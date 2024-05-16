@@ -35,8 +35,8 @@ export const Sidebar = styled.aside`
   ${ButtonContainer} {
     max-width: 344px;
     width: 100%;
-    padding: 8px 70px;
-    margin: 16px 0;
+    padding: 8px 60px;
+    margin: 8px auto;
   }
 
   .empty-text {
@@ -99,3 +99,5 @@ export const CartItem = styled.li`
     cursor: pointer;
   }
 `
+
+export const Button = styled.button``
