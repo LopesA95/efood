@@ -349,7 +349,7 @@ export const Checkout: React.FC<CheckoutProps> = ({ handleReturnToCart }) => {
                       </InputGroup>
                       <InputGroup maxWidth="155px">
                         <label htmlFor="numberHome">Número</label>
-                        <InputMask
+                        <input
                           name="numberHome"
                           id="numberHome"
                           type="text"
@@ -359,7 +359,6 @@ export const Checkout: React.FC<CheckoutProps> = ({ handleReturnToCart }) => {
                           className={
                             checkHasInputError('numberHome') ? 'has-error' : ''
                           }
-                          mask="9999"
                         />
                       </InputGroup>
                     </ContentCheckout>
