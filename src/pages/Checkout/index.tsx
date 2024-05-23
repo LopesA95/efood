@@ -1,7 +1,9 @@
 import { useFormik } from 'formik'
-import { useEffect, useState } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import { useState } from 'react'
 import InputMask from 'react-input-mask'
+import { useDispatch, useSelector } from 'react-redux'
+import { Navigate, useNavigate } from 'react-router-dom'
+import * as Yup from 'yup'
 import { Button } from '../../components/Button'
 import { CardCheckout } from '../../components/CheckoutCard'
 import { usePurchaseMutation } from '../../services/api'
@@ -15,8 +17,6 @@ import {
   OverlayCheckout,
   SidebarCheckout
 } from './styles'
-import * as Yup from 'yup'
-import { Navigate, useNavigate } from 'react-router-dom'
 
 interface CheckoutProps {
   handleReturnToCart?: () => void
@@ -334,7 +334,7 @@ export const Checkout: React.FC<CheckoutProps> = ({ handleReturnToCart }) => {
                     <ContentCheckout>
                       <InputGroup maxWidth="155px">
                         <label htmlFor="zipCode">CEP</label>
-                        <input
+                        <InputMask
                           name="zipCode"
                           id="zipCode"
                           type="text"
@@ -344,11 +344,12 @@ export const Checkout: React.FC<CheckoutProps> = ({ handleReturnToCart }) => {
                           className={
                             checkHasInputError('zipCode') ? 'has-error' : ''
                           }
+                          mask="99999-999"
                         />
                       </InputGroup>
                       <InputGroup maxWidth="155px">
                         <label htmlFor="numberHome">Número</label>
-                        <input
+                        <InputMask
                           name="numberHome"
                           id="numberHome"
                           type="text"
@@ -358,6 +359,7 @@ export const Checkout: React.FC<CheckoutProps> = ({ handleReturnToCart }) => {
                           className={
                             checkHasInputError('numberHome') ? 'has-error' : ''
                           }
+                          mask="9999"
                         />
                       </InputGroup>
                     </ContentCheckout>
